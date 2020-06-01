@@ -28,7 +28,7 @@ for (let elementIndex = 0; elementIndex < cellElementArray.length;
         if (currentPlayer == "X") {
             currentPlayer = 'O'
             clickedCellElement.innerHTML = 'X'
-            playerXSelections.push( clickedCellElement.id)
+            playerXSelections.push(clickedCellElement.id)
         }
         else {
             currentPlayer == "O"
@@ -37,7 +37,7 @@ for (let elementIndex = 0; elementIndex < cellElementArray.length;
             playerOSelections.push(clickedCellElement.id)
 
         }
-       
+
 
 
     });
@@ -48,5 +48,20 @@ for (let elementIndex = 0; elementIndex < cellElementArray.length;
 
 
 
+function forthewin(winningCombinations, playerSelections) {
+    let matches = 0
+    for (let index = 0; index < winningCombinations.length; index += 1) {
+
+        for (let jindex = 0; jindex < winningCombinations[index]; jindex += 1) {
+
+            if (playerSelections.inclues(winningCombinations[index][jindex])) {
+                    matches =+ 1 
+            }
+        }
+    }
+
+}
+{
+}
 
 
